@@ -10,6 +10,7 @@
 
     <title>Financial Calculators</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/futureValue.js"></script>
 
   </head>
   <body>
@@ -40,15 +41,40 @@
     <main>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Fluid jumbotron</h1>
+                <h1 class="display-4">Future Value Calculator</h1>
                 <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
             </div>
         </div>
 
         <!-- Calculator Block Start -->
         <div class="container">
-            <div class="row">
-                <div class="col-md text-center">col-md</div>
+            <div class="row calcblock">
+                <div class="col-md border border-dark rounded-lg">
+                    <form class="calc">
+                        <div class="form-group">
+                            <label for="principalAmount">Principal</label>
+                            <input type="text" class="form-control" id="principalAmount" placeholder="$1,000.00"
+                                autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="interestRate">Interest Rate %</label>
+                            <input type="text" class="form-control" id="interestRate" placeholder="3" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="termLength">Number of Years</label>
+                            <input type="text" class="form-control" id="termLength" placeholder="10" autocomplete="off">
+                        </div>
+                        <button id="futValCalc" type="button" class="btn btn-outline-dark">Calculate Future Value</button>
+                        <div class="form-group">
+                            <label for="futureValue">Deposit Value</label>
+                            <input type="text" class="form-control" id="futureValue" placeholder="$1,349.35">
+                        </div>
+                        <div class="form-group">
+                            <label for="netInterest">Interest Earned</label>
+                            <input type="text" class="form-control" id="netInterest" placeholder="$349.35">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
