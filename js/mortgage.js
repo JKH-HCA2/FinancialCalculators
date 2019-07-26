@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // Mortgage Calculator - this function can be used to determine the monthly payments of
 // a mortgage given the principal, interest rate, and term length of a mortgage.
@@ -20,7 +20,12 @@ function getMortgage()
     let mortgagePayment = principal * ( ( interestPct * Math.pow((1 + interestPct), numPayments) ) / ( Math.pow( (1 + interestPct), numPayments ) - 1 ) )
 
     const mortgageField = document.getElementById("mortgagePayments");
-    mortgageField.value = mortgagePayment.toFixed(2);
+    mortgageField.value = "$ " + mortgagePayment.toFixed(2);
+
+    let totalCost = numPayments * mortgagePayment;
+
+    const costField = document.getElementById("totalCost");
+    costField.value = "$ " + totalCost.toFixed(2);
 }
 
 window.onload = function()
