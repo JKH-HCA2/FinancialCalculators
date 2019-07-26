@@ -13,7 +13,7 @@ function getPresentValue()
     let interestPct = interestRate / 100;
 
     let termLength = document.getElementById("termLength").value;
-    termLength = parseFloat(termLength);
+    termLength = parseInt(termLength);
 
     let presentValue = annualPayout * ( (1 - Math.pow(1 + interestPct, -termLength)) / interestPct)
 
