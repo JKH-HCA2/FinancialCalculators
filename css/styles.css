@@ -1,16 +1,23 @@
-.subheadings {
+/* Universal Formatting */
+.subheadings 
+{
     font-size: 30px;
 }
 
-.calcblock {
+.calcblock 
+{
     width: 50%;
     margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-.calc {
+.calc 
+{
     padding: 5%;
 }
 
-.btn {
+.btn 
+{
     margin-bottom: 8px;
 }

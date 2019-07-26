@@ -10,6 +10,7 @@
 
     <title>Financial Calculators</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/presentvalue.js"></script>
   </head>
   <body>
     <!-- NavBar Start-->
@@ -38,15 +39,36 @@
     <main>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Fluid jumbotron</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <h1 class="display-4">Present Value Calculator</h1>
+                <p class="lead">Here you can make use of our easy-to-use calculator to determine the present value of an annuity. Simply enter your desired annual payout, expected interest rate, and number of years to get the present value of your annuity!</p>
             </div>
         </div>
     
         <!-- Calculator Block Start -->
         <div class="container">
-            <div class="row">
-                <div class="col-md text-center">col-md</div>
+            <div class="row calcblock">
+                <div class="col-md border border-dark rounded-lg">
+                    <form class="calc">
+                        <div class="form-group">
+                            <label for="annualPayout">Desired Annual Payout</label>
+                            <input type="text" class="form-control" id="annualPayout" placeholder="$24,000.00"
+                                autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="interestRate">Expected Interest Rate %</label>
+                            <input type="text" class="form-control" id="interestRate" placeholder="5" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="termLength">Number of Years to Payout</label>
+                            <input type="text" class="form-control" id="termLength" placeholder="20" autocomplete="off">
+                        </div>
+                        <button id="presValCalc" type="button" class="btn btn-outline-dark">Calculate Present Value</button>
+                        <div class="form-group">
+                            <label for="presentValue">Deposit Amount</label>
+                            <input type="text" class="form-control" id="presentValue" placeholder="$299,093" disabled>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
