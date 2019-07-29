@@ -48,7 +48,7 @@
         <div class="container">
             <div class="row calcblock">
                 <div class="col-md border border-dark rounded-lg">
-                    <form class="calc" method="get" autocomplete="off">
+                    <form name="mortgageForm" class="calc" method="get" autocomplete="off" onsubmit="return formValidation()">
                         <div class="form-group">
                             <label for="principalAmount">Principal</label>
                             <input type="text" class="form-control" name="principalAmount" id="principalAmount"
@@ -62,7 +62,7 @@
                             <label for="mortgageLength">Number of Years</label>
                             <input type="text" class="form-control" name="mortgageLength" id="mortgageLength" placeholder="30">
                         </div>
-                        <button id="mortgageCalc" type="button" class="btn btn-outline-dark">Calculate Mortgage</button>
+                        <button id="mortgageCalc" type="submit" class="btn btn-outline-dark">Calculate Mortgage</button>
                         <input id="resetButton" type="reset" value="Reset Fields" class="btn btn-outline-danger float-right">
                         <div class="form-group">
                             <label for="mortgagePayments">Your Monthly Payments</label>

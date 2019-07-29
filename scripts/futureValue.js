@@ -1,5 +1,53 @@
 "use strict";
 
+// This function validates the form data that the user inputs
+function formValidation()
+{
+    let principalCheck = document.forms["mortgageForm"]["principalAmount"].value;
+    if (isNaN(principalCheck) == true)
+    {
+        alert("Principal value must be a number");
+        return false;
+    }
+    else if (principalCheck < 0)
+    {
+        alert("Principal value must be positive");
+        return false;
+    }
+    let interestCheck = document.forms["mortgageForm"]["interestRate"].value
+    if (isNaN(interestCheck) == true)
+    {
+        alert("Interest value must be a number");
+        return false;
+    }
+    else if (interestCheck < 0)
+    {
+        alert("Interest rate must be positive");
+        return false;
+    }
+    else if (interestCheck > 100)
+    {
+        alert("Interest rate must be below 100%");
+        return false;
+    }
+    let termCheck = document.forms["mortgageForm"]["mortgageLength"].value
+    if (isNaN(termCheck) == true)
+    {
+        alert("Term length must be a number");
+        return false;
+    }
+    else if (termCheck < 5)
+    {
+        alert("Mortgage length must be at least five years");
+        return false;
+    }
+    else if (termCheck > 50)
+    {
+        alert("Mortgage length cannot be greater than fifty years");
+        return false;
+    }
+}
+
 // Future Value Calculator - this function can be used to determine the future value
 // of a principal dollar amount given the interest rate and term length
 
