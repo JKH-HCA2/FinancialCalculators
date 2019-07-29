@@ -10,7 +10,7 @@
 
     <title>Financial Calculators</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="js/presentvalue.js"></script>
+    <script src="scripts/presentValue.js"></script>
   </head>
   <body>
     <!-- NavBar Start-->
@@ -48,24 +48,25 @@
         <div class="container">
             <div class="row calcblock">
                 <div class="col-md border border-dark rounded-lg">
-                    <form class="calc">
+                    <form class="calc" method="get" autocomplete="off">
                         <div class="form-group">
                             <label for="annualPayout">Desired Annual Payout</label>
-                            <input type="text" class="form-control" id="annualPayout" placeholder="$24,000.00"
-                                autocomplete="off" autofocus>
+                            <input type="text" class="form-control" name="annualPayout" id="annualPayout" placeholder="$24,000.00"
+                                autofocus>
                         </div>
                         <div class="form-group">
                             <label for="interestRate">Expected Interest Rate %</label>
-                            <input type="text" class="form-control" id="interestRate" placeholder="5" autocomplete="off">
+                            <input type="text" class="form-control" name="interestRate" id="interestRate" placeholder="5">
                         </div>
                         <div class="form-group">
                             <label for="termLength">Number of Years to Payout</label>
-                            <input type="text" class="form-control" id="termLength" placeholder="20" autocomplete="off">
+                            <input type="text" class="form-control" name="termLength" id="termLength" placeholder="20">
                         </div>
                         <button id="presValCalc" type="button" class="btn btn-outline-dark">Calculate Present Value</button>
+                        <input id="resetButton" type="reset" value="Reset Fields" class="btn btn-outline-danger float-right">
                         <div class="form-group">
                             <label for="presentValue">Deposit Amount</label>
-                            <input type="text" class="form-control" id="presentValue" placeholder="$299,093" disabled>
+                            <input type="text" class="form-control" name="presentValue" id="presentValue" placeholder="$299,093" disabled>
                         </div>
                     </form>
                 </div>

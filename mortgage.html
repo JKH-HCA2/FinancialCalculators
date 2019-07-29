@@ -10,7 +10,7 @@
 
     <title>Financial Calculators</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="js/mortgage.js"></script>
+    <script src="scripts/mortgage.js"></script>
   </head>
   <body>
 
@@ -48,28 +48,29 @@
         <div class="container">
             <div class="row calcblock">
                 <div class="col-md border border-dark rounded-lg">
-                    <form class="calc">
+                    <form class="calc" method="get" autocomplete="off">
                         <div class="form-group">
                             <label for="principalAmount">Principal</label>
-                            <input type="text" class="form-control" id="principalAmount"
-                                placeholder="$100,000.00" autocomplete="off" autofocus>
+                            <input type="text" class="form-control" name="principalAmount" id="principalAmount"
+                                placeholder="$100,000.00" autofocus>
                         </div>
                         <div class="form-group">
                             <label for="interestRate">Interest Rate %</label>
-                            <input type="text" class="form-control" id="interestRate" placeholder="3.92" autocomplete="off">
+                            <input type="text" class="form-control" name="interestRate" id="interestRate" placeholder="3.92">
                         </div>
                         <div class="form-group">
                             <label for="mortgageLength">Number of Years</label>
-                            <input type="text" class="form-control" id="mortgageLength" placeholder="30" autocomplete="off">
+                            <input type="text" class="form-control" name="mortgageLength" id="mortgageLength" placeholder="30">
                         </div>
                         <button id="mortgageCalc" type="button" class="btn btn-outline-dark">Calculate Mortgage</button>
+                        <input id="resetButton" type="reset" value="Reset Fields" class="btn btn-outline-danger float-right">
                         <div class="form-group">
                             <label for="mortgagePayments">Your Monthly Payments</label>
-                            <input type="text" class="form-control" id="mortgagePayments" placeholder="473" disabled>
+                            <input type="text" class="form-control" name="mortgagePayments" id="mortgagePayments" placeholder="473" disabled>
                         </div>
                         <div class="form-group">
                             <label for="totalCost">Total Cost of Loan</label>
-                            <input type="text" class="form-control" id="totalCost" placeholder="$170,213" disabled>
+                            <input type="text" class="form-control" name="totalCost" id="totalCost" placeholder="$170,213" disabled>
                         </div>
                     </form>
                 </div>
